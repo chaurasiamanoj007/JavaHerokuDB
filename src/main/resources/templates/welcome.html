@@ -44,10 +44,9 @@
 							<th><b>Status</b></td>
 						</tr>
 						<tr th:if="${userLst.empty}">
-				            <td colspan="2"> No Books Available </td>
-				        </tr>	
+				            <td colspan="3"> No Users Available </td>
+				        </tr>
 						<tr th:each="user : ${userLst}">
-							<td></td>
 							<td><span th:text="${user.userId}"></span></td>
 							<td><span th:text="${user.userName}"></span></td>
 							<td><span th:text="${user.status}"></span></td>
