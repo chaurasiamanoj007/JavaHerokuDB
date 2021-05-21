@@ -29,17 +29,31 @@
 			</ul>
 		</nav>
 		<main>
-		<h1>
-			<b>Home Page</b>
-		</h1>
-		<div class="flex-grid">
-			<div>
-				<h2>
-					<b>Welcome to Heroku - Java Home page</b>
-				</h2>
-				Details about the project will be displayed.
+			<h1>
+				<b>Home Page</b>
+			</h1>
+			<div class="flex-grid">
+				<div>
+					<h2>
+						<b>Welcome to Heroku - Java Home page</b>
+					</h2>
+					<table id="formInputTable" class="formFormat">
+						<tr> 
+							<td colspan="2" align = "center">User Id</td>
+							<td colspan="2" align = "center">User Name</td>
+							<td colspan="2" align = "center">Status</td>
+						</tr>
+						<tr th:if="${userLst.empty}">
+				            <td colspan="2"> No Books Available </td>
+				        </tr>	
+						<tr th:each="user : ${userLst}">
+							<td><span th:text="${user.userId}"></span></td>
+							<td><span th:text="${user.userName}"></span></td>
+							<td><span th:text="${user.status}"></span></td>
+   						</tr>
+   					</table>        				
+				</div>
 			</div>
-		</div>
 		</main>
 	</div> 
 

@@ -39,7 +39,7 @@ public class DatabaseConfig {
 	@Bean(name = "pgJdbcTemplate")
 	public JdbcTemplate jdbcTemplate(@Qualifier("postgresDS") DataSource postgresDataSource) {
 		String CURRENT_METHOD = "jdbcTemplate";		
-		System.out.println(CURRENT_CLASS+" ::: "+CURRENT_METHOD+":: Inside method");
+		System.out.println(CURRENT_CLASS+" ::: "+CURRENT_METHOD+" :: Inside method");
 		
 		return new JdbcTemplate(postgresDataSource);
 	}
