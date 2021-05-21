@@ -32,6 +32,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+	  	</dependency>
 		<!-- Hikari Config -->
 		<dependency>
 			<groupId>com.zaxxer</groupId>
@@ -44,6 +49,10 @@
 		    <version>3.2.0.RELEASE</version>
 		</dependency>  -->	
 		<!-- JDBC Connection -->
+		<dependency>  
+			<groupId>org.apache.tomcat</groupId>  
+			<artifactId>tomcat-jdbc</artifactId>  
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
