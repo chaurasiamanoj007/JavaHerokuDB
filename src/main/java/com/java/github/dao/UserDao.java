@@ -24,7 +24,7 @@ public class UserDao {
 	
 	public List<User> fetchUserDetails(){
 		String CURRENT_METHOD = "fetchUserDetails";	
-		String USER_FETCH = "SELECT USERID, USERNAME, STAUS FROM DEV.USER";
+		String USER_FETCH = "SELECT USERID, USERNAME, STATUS FROM DEV.USER";
 		System.out.println(CURRENT_CLASS+" ::: "+CURRENT_METHOD+":: Inside method");
 		
 		@SuppressWarnings("unchecked")
@@ -44,7 +44,7 @@ public class UserDao {
 			String CURRENT_METHOD = "mapRow";		
 			//System.out.println(CURRENT_CLASS+" ::: "+CURRENT_METHOD+":: Inside method");
 						
-			return new User(rs.getInt("USERID"), rs.getString("USERNAME"), rs.getString("STAUS"));
+			return new User(rs.getInt("USERID"), rs.getString("USERNAME"), rs.getString("STATUS"));
 		}
 	}
 		
